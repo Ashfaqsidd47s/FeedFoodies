@@ -1,0 +1,440 @@
+/* reset css  */
+* {
+    margin: 0;
+    padding:0;
+}
+
+/* navbar styling  */
+
+#navigation::before {
+    content: "";
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 45px;
+    background-color: black;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#navigation {
+    height: 50px;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    z-index: 101;
+}
+
+/* logo at the nevbar  */
+.logo{
+    margin: 5px;
+    color: rgb(220, 9, 37);
+    font-size: 26px;
+}
+    
+/* navigation bar items  */
+#navigation ul{
+    display: flex;
+    list-style: none;
+}
+
+#navigation ul a {
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 13px;
+    color: blanchedalmond;
+    transition: color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+#navigation ul a:hover {
+    color: black;
+    background-color: blanchedalmond;
+}
+
+/* first section  */
+.section1{
+    position: relative;
+    height: 400px;
+}
+.backContiner{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.backContiner::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: 0.4;
+    z-index: 4;
+}
+.backItem{
+    flex: none;
+    width: 100%;
+    height: 400px;  
+    z-index: 1;
+    transition: all 0.5s;
+}
+.backItem:first-child{
+    position: absolute;
+    top: 0px;
+    transform: translateX(0%);
+    animation: slide1 10s ease-in-out  2 alternate ;
+    z-index: 3;
+}
+.backItem:nth-child(2){
+    transform: translateX(100%);
+    animation: slide2 10s ease-in-out  2 alternate ;
+}
+.backItem:last-child{
+    position: absolute;
+    top: 0px;
+    transform: translateX(200%);
+    z-index: 2;
+    animation: slide3 10s ease-in-out  2 alternate ;
+}
+.backItem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@keyframes slide1 {
+    0% {
+        transform: translateX(0%);
+    }
+    20% {
+        transform: translateX(0%);
+    }
+    40%{
+        transform: translateX(-100%);
+    }
+    60%{
+        transform: translateX(-100%);
+    }
+    80%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
+@keyframes slide2 {
+    0% {
+        transform: translateX(100%);
+    }
+    20% {
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(0%);
+    }
+    60%{
+        transform: translateX(0%);
+    }
+    80%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes slide3 {
+    0% {
+        transform: translateX(200%);
+    }
+    20% {
+        transform: translateX(200%);
+    }
+    40%{
+        transform: translateX(100%);
+    }
+    60%{
+        transform: translateX(100%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+/* order section  */
+.order {
+    width: 90%;
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    left: 5%;
+    z-index: 5;
+}
+
+.order h1 {
+    font-size: 90px;
+    color: blanchedalmond;
+}
+
+.order p{
+    text-align: center;
+    color: blanchedalmond;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.orderBtnSec{
+    display: flex;
+    gap: 2vw;
+}
+.orderBtnSec button{
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+.servicesBtn{
+    background-color: blanchedalmond;
+}
+.orderBtn{
+    background-color: rgb(220, 9, 37);
+}
+
+/* services section */
+.services{
+    background-color: #222;
+    padding: 20px 0px;
+}
+.services h2{
+    color: #222;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 38px;
+    line-height: 42px;
+    letter-spacing: 4px;
+    -webkit-text-stroke: 0.3px white;
+}
+
+.servicesWrapper{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.service{
+    width: 310px;
+    height: 400px;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+}
+.service img{
+    width: 95%;
+    height: 65%;
+    align-self: center;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.service h3 {
+    color: blanchedalmond;
+    margin-bottom: 10px;
+}
+.service p {
+    color: blanchedalmond;
+}
+
+/* menue section  */
+.menue{
+    background-color: #222;
+}
+.menueWrapper{
+
+}
+.menueWrapper h2{
+    color: #222;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 38px;
+    line-height: 42px;
+    letter-spacing: 4px;
+    -webkit-text-stroke: 0.3px white;
+}
+
+.foodItems{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.foodItem{
+    width: calc(100% - 40px);
+    height: 280px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid blanchedalmond;
+    display: flex;
+    justify-content: space-between;
+}
+.foodItemLeft{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.foodType{}
+.vegNonvegLogo{
+    width: 17px;
+    height: 17px;
+    border-radius: 3px;
+    border: 2px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vegNonvegLogoInner{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.foodCategori{
+    color: blanchedalmond;
+}
+.foodName{
+    color: blanchedalmond;
+}
+.foodRatting{
+    color: blanchedalmond;
+}
+.foodPrice{
+    color: blanchedalmond;
+}
+.foodIngridients{
+    color: blanchedalmond;
+}
+.foodLikeShare{
+    color: red;
+    position: absolute;
+    font-size: 26px;
+    top: 230px;
+}
+.foodItemRight{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.foodItemRight img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+.addItemBtn{
+    color: red;
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid red;
+    background-color: blanchedalmond;
+    position: absolute;
+    top: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* sliding image section  */
+.slideImg{
+    height: calc(100vh - 50px);
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: inline mandatory;
+}
+
+.slideItem{
+    flex: none;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.slideItem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slideItem > * {
+    scroll-snap-align: start;
+}
+
+/* about section  */
+.about{
+    padding: 20px;
+    background-color: #222;
+    color: blanchedalmond;
+}
+.aboutWrapper{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutWrapper::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    background-color: blanchedalmond;
+    opacity: 0.09;
+    z-index: -1;
+}
+.aboutWrapper h3{
+    display: none;
+    position: absolute;
+    top: 50px;
+    color: blanchedalmond;
+    font-size: 80px;
+    z-index: 1;
+    -webkit-text-stroke:0.4px blanchedalmond ;
+}
+.aboutWrapper h2{
+    text-align: center;
+    font-size: 40px;
+    font-family: sans-serif;
+    padding: 20px 0px;
+    z-index: 2;
+}
+
+.aboutInfo{
+    width: 80%;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+hr{
+    width: 100%;
+}
+.copyrightClaim{
+    text-align: center;
+    padding: 20px 0px;
+}
